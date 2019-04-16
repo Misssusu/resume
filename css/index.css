@@ -17,6 +17,12 @@ hr {
     border: none;
     border-top: 1px solid #DEDEDE;
 }
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
 .topNavBar {
     position: fixed;
     width: 100%;
@@ -124,4 +130,26 @@ hr {
 }
 .pictureAndtext_right dl dd {
     width: 70%;
+}
+.media {
+    background : #E6686A;
+    text-align: center;
+}
+.media > a {
+    display: inline-block;
+    width: 40px;
+    line-height: 30px;
+    padding: 5px 0;
+    text-align: center;
+    margin: 16px;
+}
+.media > a > svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    vertical-align: top;
+}
+.media > a > span {
+    color: white;
+    font-weight: bold;
 }
