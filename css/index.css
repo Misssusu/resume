@@ -4,6 +4,7 @@
 }
 body{
     background: #EFEFEF;
+    font-family: Arial, Helvetica, sans-serif;
 }
 a {
     text-decoration: none;
@@ -27,6 +28,8 @@ hr {
     position: fixed;
     width: 100%;
     color: #b7b7b7;
+    background: #000;
+    z-index: 999;
 }
 .topNavBar nav > ul > li, .logo {
     float: left;
@@ -77,10 +80,16 @@ hr {
     height: 550px;
     background-color: rgba(0, 0, 0, 0.7);
 }
+/* main start */
+main {
+    margin-top: -380px;
+}
 .userCard {
+    font-family: KaiTi;
     background-color: #ffffff;
     max-width: 940px;
     margin: 0 auto;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .userCard > .pictureAndtext > .pictureAndtext_left img {
     width: 299px;
@@ -127,6 +136,7 @@ hr {
 }
 .pictureAndtext_right dl dt {
     width: 30%;
+    font-weight: bold;
 }
 .pictureAndtext_right dl dd {
     width: 70%;
@@ -149,7 +159,84 @@ hr {
     fill: white;
     vertical-align: top;
 }
-.media > a > span {
+.media > a > .jian {
     color: white;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main .downloadResumeWrapper {
+    text-align: center;
+}
+main .downloadResumeWrapper > a {
+    display: inline-block;
+    font-size: 14px;
+    padding: 21px 55px;
+    border: 1px solid #cdcfd1;
+    color: #3d4451;
+    font-weight: bold;
+    margin: 32px 0;
+    border-radius: 2px;
+    line-height: 16px;
+    transition: box-shadow 0.5s;
+}
+main .downloadResumeWrapper > a:hover {
+    box-shadow: 0px 9px 13px -4px rgba(0,0,0,0.41);
+}
+main .introduction {
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: KaiTi;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: bold;
+}
+/* skills start */
+.skills {
+    max-width: 940px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.skills > h2 {
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+.skills > ol {
+    background-color: #ffffff;
+    padding: 42px 50px 2px 50px;
+    margin-top: 30px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.skills ol > li {
+    width: 48%;
+    box-sizing: border-box;
+}
+.skills ol > li:nth-child(odd) {
+    float: left;
+    padding-right: 8px;
+}
+.skills ol > li:nth-child(even) {
+    float: right;
+}
+.skills ol > li > h3 {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+}
+.skills ol > li > .progressBar {
+    width: 100%;
+    height: 5px;
+    background: #FAE1E1;
+    border-radius: 2px;
+    margin: 4px 0 40px;
+}
+.skills ol > li > .progressBar > .progress {
+    width: 90%;
+    height: 5px;
+    background: #E6686A;
+    border-radius: 2px;
 }
