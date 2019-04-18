@@ -4,7 +4,6 @@
 }
 body{
     background: #EFEFEF;
-    font-family: Arial, Helvetica, sans-serif;
 }
 a {
     text-decoration: none;
@@ -85,7 +84,6 @@ main {
     margin-top: -380px;
 }
 .userCard {
-    font-family: KaiTi;
     background-color: #ffffff;
     max-width: 940px;
     margin: 0 auto;
@@ -126,6 +124,7 @@ main {
 }
 .pictureAndtext_right h1 {
     margin-top: 18px;
+    font-family: KaiTi;
 }
 .pictureAndtext_right hr {
     margin: 20px 0;
@@ -192,12 +191,12 @@ main .introduction {
     font-weight: bold;
 }
 /* skills start */
-.skills {
+.skills, .portfolio {
     max-width: 940px;
     margin: 0 auto;
     margin-top: 60px;
 }
-.skills > h2 {
+.skills > h2, .portfolio > h2 {
     text-align: center;
     color: #3d4451;
     font-size: 34px;
@@ -239,4 +238,71 @@ main .introduction {
     height: 5px;
     background: #E6686A;
     border-radius: 2px;
+}
+/* portfolio start */
+.portfolio {
+    text-align: center;
+    margin-bottom: 200px;
+}
+.portfolio > nav {
+    text-align: center;
+    display: inline-block;
+    margin-top: 32px;
+}
+.portfolio > nav > ol {
+    display: inline-block;
+    vertical-align: top;
+}
+.portfolio > nav > ol > li {
+    float: left;
+    cursor: pointer;
+}
+.portfolio > nav > ol > li:not(:first-child) {
+    margin-left: 50px;
+}
+.portfolio > nav > .portfolioBar {
+    width: 100%;
+    height: 5px;
+    background: white;
+    border-radius: 2px;
+    margin: 5px 0 28px 0;
+}
+.portfolio > nav > .portfolioBar > .portfolioBarInner {
+    transition: all 0.3s;
+}
+.portfolio > nav > .portfolioBar > .portfolioBarInner.portfolioBarAll {
+    width: 20%;
+    height: 5px;
+    border-radius: 2px;
+    background: #E6686A;
+}
+.portfolio > nav > .portfolioBar > .portfolioBarInner.portfolioBarFrameWork {
+    width: 20%;
+    height: 5px;
+    border-radius: 2px;
+    margin-left: 73px;
+    background: #E6686A;
+}
+.portfolio > nav > .portfolioBar > .portfolioBarInner.portfolioBarNative {
+    width: 40%;
+    height: 5px;
+    border-radius: 2px;
+    margin-left: 160px;
+    background: #E6686A;
+}
+.portfolio > .itemBox {
+    position: relative;
+    height: 597px;
+    border: 1px solid red;
+}
+.portfolio > .itemBox > div {
+    float: left;
+    position: absolute;
+}
+.portfolio > .itemBox > .item2,
+.portfolio > .itemBox > .item3 {
+    right: 0;
+}
+.portfolio > .itemBox > .item3 {
+    bottom: 0;
 }
