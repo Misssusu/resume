@@ -293,7 +293,6 @@ main .introduction {
 .portfolio > .itemBox {
     position: relative;
     height: 597px;
-    border: 1px solid red;
 }
 .portfolio > .itemBox > div {
     float: left;
