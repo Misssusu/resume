@@ -10,6 +10,9 @@
 </head>
 <script src="//at.alicdn.com/t/font_1143938_1ld3z8ywpjzj.js"></script>
 <body>
+    <div class="loading-wrapper active" id="loadingWrapper">
+        <div class="loading"></div>
+    </div>
     <div class="topNavBar">
         <div class="topNavBar_inner clearfix">
             <div class="logo">
@@ -174,5 +177,9 @@
         </div>
     </section>
 </body>
-
+<script>
+    setTimeout(function() {
+        loadingWrapper.classList.remove('active');
+    },3000)
+</script>
 </html>
