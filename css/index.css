@@ -78,8 +78,16 @@ hr {
     position: fixed;
     width: 100%;
     color: #b7b7b7;
-    background: #000;
     z-index: 1;
+    transition: all 0.5s;
+}
+.topNavBar.sticky {
+    color: #3d4451;
+    background: #fff;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.topNavBar.sticky .topNavBar_inner {
+    padding: 15px 16px;
 }
 .topNavBar nav > ul > li, .logo {
     float: left;

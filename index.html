@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <script src="//at.alicdn.com/t/font_1143938_1ld3z8ywpjzj.js"></script>
+
 <body>
     <div class="loading-wrapper active" id="loadingWrapper">
         <div class="loading"></div>
     </div>
-    <div class="topNavBar">
+    <div class="topNavBar" id="topNavBar">
         <div class="topNavBar_inner clearfix">
             <div class="logo">
                 <span>RS</span><span>card</span>
@@ -94,7 +95,7 @@
         <p class="downloadResumeWrapper">
             <a href="" download target="_blank">下载 PDF 简历</a>
         </p>
-        <p class="introduction">     
+        <p class="introduction">
             方应杭， 资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。
             <br>
             技能：前端开发，Rails 开发，Node.js 开发
@@ -154,13 +155,13 @@
             </div>
         </nav>
         <script>
-            portfolioAll.onclick = function() {
+            portfolioAll.onclick = function () {
                 bar.className = 'portfolioBarInner portfolioBarAll';
             }
-            portfolioFrameWork.onclick = function() {
+            portfolioFrameWork.onclick = function () {
                 bar.className = 'portfolioBarInner portfolioBarFrameWork';
             }
-            portfolioNative.onclick = function() {
+            portfolioNative.onclick = function () {
                 bar.className = 'portfolioBarInner portfolioBarNative';
             }
         </script>
@@ -178,8 +179,16 @@
     </section>
 </body>
 <script>
-    setTimeout(function() {
+    setTimeout(function () {
         loadingWrapper.classList.remove('active');
-    },3000)
+    }, 2000)
+    window.onscroll = function () {
+        if (window.scrollY > 0) {
+            topNavBar.classList.add('sticky');
+        } else {
+            topNavBar.classList.remove('sticky');
+        }
+    }
 </script>
+
 </html>
