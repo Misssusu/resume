@@ -27,9 +27,9 @@
                     <li>
                         <a href="#">技能</a>
                     </li>
-                    <li>
-                        <a href="#">作品</a>
-                        <ul class="submenu">
+                    <li id="munetrigger">
+                        <a href="#" id="production">作品</a>
+                        <ul id="submenu" class="submenu">
                             <li>作品1</li>
                             <li>作品2</li>
                             <li>作品3</li>
@@ -193,6 +193,19 @@
         } else {
             topNavBar.classList.remove('sticky');
         }
+    }
+    //当鼠标进入的时候显示下拉列表
+    //1.onmouseenter
+    //2.加上active类
+    //3.onmouseleave
+    //4.去掉active类
+    munetrigger.onmouseenter = function() {
+        submenu.classList.add('active');
+        production.classList.add('active');
+    }
+    munetrigger.onmouseleave = function() {
+        submenu.classList.remove('active');
+        production.classList.remove('active');
     }
 </script>
 

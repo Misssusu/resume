@@ -115,7 +115,7 @@ hr {
     padding: 5px 0px;
     border-bottom: 3px solid transparent;
 }
-.topNavBar nav > ul > li > a:hover::after {
+.topNavBar nav > ul > li > #production.active::after {
     content: '';
     display: block;
     height: 3px;
