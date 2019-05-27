@@ -22,13 +22,13 @@
             <nav>
                 <ul class="clearfix">
                     <li>
-                        <a href="#">关于</a>
+                        <a href="#about">关于</a>
                     </li>
                     <li>
-                        <a href="#">技能</a>
+                        <a href="#skill">技能</a>
                     </li>
                     <li id="munetrigger">
-                        <a href="#" id="production">作品</a>
+                        <a href="#work" id="production">作品</a>
                         <ul id="submenu" class="submenu">
                             <li>作品1</li>
                             <li>作品2</li>
@@ -54,7 +54,7 @@
     <div class="banner">
         <div class="mask"></div>
     </div>
-    <main>
+    <main id="about">
         <div class="userCard">
             <div class="pictureAndtext clearfix">
                 <div class="pictureAndtext_left">
@@ -106,7 +106,7 @@
             技能：前端开发，Rails 开发，Node.js 开发
         </p>
     </main>
-    <section class="skills">
+    <section id="skill" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -147,7 +147,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section id="work" class="portfolio">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -187,6 +187,7 @@
     setTimeout(function () {
         loadingWrapper.classList.remove('active');
     }, 2000)
+    //页面滚动
     window.onscroll = function () {
         if (window.scrollY > 0) {
             topNavBar.classList.add('sticky');
@@ -207,6 +208,19 @@
         submenu.classList.remove('active');
         production.classList.remove('active');
     }
+    //页面滚动到指定的元素
+    let aTags = document.querySelectorAll('.topNavBar ul li a');
+    for(let i=0;i < aTags.length; i++) {
+        aTags[i].onclick = function(evt) {
+            evt.preventDefault();
+            let a = evt.currentTarget;
+            let href = a.getAttribute('href');
+            let ele = document.querySelector(href)
+            let top = ele.offsetTop;
+            window.scrollTo(0, top-80);
+        }
+    }
+
 </script>
 
 </html>
