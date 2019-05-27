@@ -213,11 +213,28 @@
     for(let i=0;i < aTags.length; i++) {
         aTags[i].onclick = function(evt) {
             evt.preventDefault();
-            let a = evt.currentTarget;
-            let href = a.getAttribute('href');
-            let ele = document.querySelector(href)
-            let top = ele.offsetTop;
-            window.scrollTo(0, top-80);
+            let top = document.querySelector(evt.currentTarget.getAttribute('href')).offsetTop
+            // window.scrollTo(0, top-80);
+            //当点击菜单的时候，页面缓缓的滚动到指定的位置
+            //循环增加每次滚动的高度直到到达指定的位置
+            //1.须知道当前的高度
+            //2.须知道每次增加的高度
+            //3.须知道每次滚动的高度
+            let currentTop = window.scrollY;
+            let n = 25 //滚动25次
+            let duration = 500/n //每次滚动动画的时间
+            let targetTop = top-80; //目标位置
+            let distance = (targetTop - currentTop)/n //每次要滚动的距离
+            console.log(distance)
+            let i = 0;
+            let durationId = setInterval(() => {
+                if(i===n) {
+                    window,clearInterval(durationId);
+                    return;
+                }
+                i = i + 1;
+                window.scrollTo(0, currentTop + distance * i);
+            },duration)
         }
     }
 
