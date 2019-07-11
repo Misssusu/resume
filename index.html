@@ -188,12 +188,20 @@
         loadingWrapper.classList.remove('active');
     }, 2000)
     //页面滚动
-    window.onscroll = function () {
+    window.onscroll = function (evt) {
+        console.log(evt)
         if (window.scrollY > 0) {
             topNavBar.classList.add('sticky');
         } else {
             topNavBar.classList.remove('sticky');
         }
+        var aboutTop = about.offsetTop;
+        console.log(aboutTop); //170
+        var skillTop = skill.offsetTop;
+        console.log(skillTop); //894
+        var workTop = work.offsetTop;
+        console.log(workTop); //1261
+        console.log('--------------'+ window.scrollY);
     }
     //当鼠标进入的时候显示下拉列表
     //1.onmouseenter
@@ -208,7 +216,7 @@
         submenu.classList.remove('active');
         production.classList.remove('active');
     }
-    //页面滚动到指定的元素
+    //点击菜单后页面滚动到指定的元素
     let aTags = document.querySelectorAll('.topNavBar ul li a');
     for(let i=0;i < aTags.length; i++) {
         aTags[i].onclick = function(evt) {
