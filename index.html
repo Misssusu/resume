@@ -159,17 +159,6 @@
                 <div id="bar" class="portfolioBarInner portfolioBarAll"></div>
             </div>
         </nav>
-        <script>
-            portfolioAll.onclick = function () {
-                bar.className = 'portfolioBarInner portfolioBarAll';
-            }
-            portfolioFrameWork.onclick = function () {
-                bar.className = 'portfolioBarInner portfolioBarFrameWork';
-            }
-            portfolioNative.onclick = function () {
-                bar.className = 'portfolioBarInner portfolioBarNative';
-            }
-        </script>
         <div class="itemBox clearfix">
             <div class="item1">
                 <img src="./image/1.jpg" alt="作品1">
@@ -186,7 +175,7 @@
 <script>
     setTimeout(function () {
         loadingWrapper.classList.remove('active');
-    }, 2000)
+    }, 2000);
     //页面滚动
     window.onscroll = function (evt) {
         console.log(evt)
@@ -249,3 +238,4 @@
 </script>
 
 </html>
+<script src="js/portfolio.js"></script>
